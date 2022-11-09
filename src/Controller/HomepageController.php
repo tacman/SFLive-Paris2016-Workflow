@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Survos\WorkflowBundle\Service\WorkflowHelperService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -10,9 +11,14 @@ class HomepageController extends AbstractController
     /**
      * @Route("/", name="homepage")
      */
-    public function index()
+    public function index(WorkflowHelperService $workflowHelperService)
     {
-        return $this->render('homepage/index.html.twig');
+        $workflows = $workflowHelperService->getWorkflowsGroupedByClass();
+
+        return $this->render('homepage/index.html.twig', [
+            'workflows' => $workflows,
+            'workflowsByTaggedIterator' => $workflowHelperService->getWorkflowsFromTaggedIterator()
+        ]);
     }
 
     /**
