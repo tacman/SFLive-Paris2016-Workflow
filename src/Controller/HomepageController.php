@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Survos\WorkflowBundle\Service\WorkflowHelperService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomepageController extends AbstractController
@@ -11,13 +12,15 @@ class HomepageController extends AbstractController
     /**
      * @Route("/", name="homepage")
      */
-    public function index(WorkflowHelperService $workflowHelperService)
+    public function index(WorkflowHelperService $workflowHelperService, ParameterBagInterface $parameters)
     {
         $workflows = $workflowHelperService->getWorkflowsGroupedByClass();
+        $configuration =  $parameters->get('workflows.configuration');
 
         return $this->render('homepage/index.html.twig', [
             'workflows' => $workflows,
-            'workflowsByTaggedIterator' => $workflowHelperService->getWorkflowsFromTaggedIterator()
+            'workflowsByTaggedIterator' => $workflowHelperService->getWorkflowsFromTaggedIterator(),
+            'workflowsConfiguration' => $configuration,
         ]);
     }
 

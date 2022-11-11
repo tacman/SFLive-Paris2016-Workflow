@@ -11,7 +11,7 @@
         "doctrine/orm": "^2.11",
         "phpdocumentor/reflection-docblock": "^5.3",
         "sensio/framework-extra-bundle": "^6.0",
-        "survos/workflow-helper-bundle": "^1.2.24",
+        "survos/workflow-helper-bundle": "*@dev",
         "symfony/asset": "^6.0",
         "symfony/console": "^6.0",
         "symfony/dotenv": "^6.0",
@@ -31,7 +31,8 @@
         "symfony/validator": "^6.0",
         "symfony/web-link": "^6.0",
         "symfony/workflow": "^6.0",
-        "symfony/yaml": "^6.0"
+        "symfony/yaml": "^6.0",
+        "twig/extra-bundle": "^3.4"
     },
     "require-dev": {
         "symfony/browser-kit": "^6.0",
@@ -96,6 +97,12 @@
         "symfony": {
             "allow-contrib": false,
             "require": "^6.2"
+        }
+    },
+    "repositories": {
+        "workflow-helper": {
+            "type": "path",
+            "url": "//home/tac/g/survos/survos/packages/workflow-helper-bundle"
         }
     }
 }

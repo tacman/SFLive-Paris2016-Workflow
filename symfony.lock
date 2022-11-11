@@ -432,6 +432,9 @@
     "symfony/yaml": {
         "version": "6.0.x-dev"
     },
+    "twig/extra-bundle": {
+        "version": "v3.4.0"
+    },
     "twig/twig": {
         "version": "3.x-dev"
     },
