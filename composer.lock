@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58c9e76fe16ad08f59380fa5502f98c8",
+    "content-hash": "912d635f26bfd61332d4ae2969859302",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1865,16 +1865,22 @@
         },
         {
             "name": "survos/workflow-helper-bundle",
-            "version": "dev-main",
+            "version": "1.2.25",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/survos/SurvosWorkflowHelperBundle.git",
+                "reference": "47e47d7cca9f8a2dea30a71c242b28310a173482"
+            },
             "dist": {
-                "type": "path",
-                "url": "//home/tac/g/survos/survos/packages/workflow-helper-bundle",
-                "reference": "f03981e7ac771b4edf6e579857518c09293c00a8"
+                "type": "zip",
+                "url": "https://api.github.com/repos/survos/SurvosWorkflowHelperBundle/zipball/47e47d7cca9f8a2dea30a71c242b28310a173482",
+                "reference": "47e47d7cca9f8a2dea30a71c242b28310a173482",
+                "shasum": ""
             },
             "require": {
                 "doctrine/orm": "^2.12",
                 "php": "^8.1",
-                "survos/core-bundle": "^1.2",
+                "survos/core-bundle": "^1.2.25",
                 "symfony/console": "^6.1.0",
                 "symfony/http-kernel": "^6.1.0",
                 "symfony/messenger": "^6.1.0",
@@ -1931,6 +1937,7 @@
                     "Survos\\WorkflowBundle\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1945,9 +1952,11 @@
                 "symfony-ux",
                 "workflow"
             ],
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/survos/SurvosWorkflowHelperBundle/issues",
+                "source": "https://github.com/survos/SurvosWorkflowHelperBundle/tree/1.2.25"
+            },
+            "time": "2022-11-11T13:58:30+00:00"
         },
         {
             "name": "symfony/asset",
@@ -7228,9 +7237,7 @@
     ],
     "aliases": [],
     "minimum-stability": "beta",
-    "stability-flags": {
-        "survos/workflow-helper-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
